@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/categories_list_view.dart';
-import 'package:news_app/widgets/news_tile_list.dart';
+import 'package:news_app/widgets/news_list_view.dart';
+import 'package:news_app/widgets/news_list_view_builder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
+//web view
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,9 @@ class HomeView extends StatelessWidget {
                 height: 10,
               ),
             ),
-            NewsTileList(),
+            NewsListViewBuilder(
+              category: 'general',
+            ),
           ],
         ));
   }
