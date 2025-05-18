@@ -9,6 +9,7 @@ class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key, required this.category});
 
   final String category;
+
   @override
   State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
 }
@@ -46,7 +47,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
           } else {
             return SliverToBoxAdapter(
               child: SizedBox(
-                height: 400,
+                height: 500,
                 child: Center(
                   child: CircularProgressIndicator(
                     color: Colors.orange,
@@ -58,13 +59,3 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
         });
   }
 }
-
-// isLoading
-// ? SliverToBoxAdapter(
-// child: SizedBox(
-// height: 400,
-// child: Center(
-// child: CircularProgressIndicator(
-// color: Colors.orange,
-// ))))
-//     : NewsListView(articles: articles ,);

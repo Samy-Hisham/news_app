@@ -18,11 +18,7 @@ class NewService {
 
       List<ArticleModel> articlesList = [];
       for (var article in articles) {
-        ArticleModel articleModel = ArticleModel(
-          article['title'],
-          article['description'],
-          article['urlToImage'],
-        );
+        ArticleModel articleModel = ArticleModel.fromJson(article);
         articlesList.add(articleModel);
       }
 

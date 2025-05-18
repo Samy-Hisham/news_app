@@ -5,6 +5,7 @@ import 'package:news_app/widgets/news_list_view_builder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
+
 //web view
   @override
   Widget build(BuildContext context) {
